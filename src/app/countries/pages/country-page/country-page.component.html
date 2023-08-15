@@ -1,0 +1,507 @@
+<ng-template #loading>
+  <div class="alert alert-info text-center">
+    Espere por favor
+  </div>
+
+</ng-template>
+
+<div *ngIf="country; else loading">
+
+  <div class="row" >
+    <div class="col-12">
+      <h2>País: <strong>{{country.name.common}} </strong></h2>
+      <hr>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-4">
+      <h3>Bandera</h3>
+      <img [src]="country.flags.svg" [alt]="country.name.common" class="img-thumbnail">
+    </div>
+    <div class="col">
+      <h3>Información</h3>
+
+      <ul class="list-group ">
+        <li class="list-group-item">
+          <strong>Código:</strong> {{country.cca3}}
+        </li>
+        <li class="list-group-item">
+          <strong>Población:</strong> {{country.population | number}}
+        </li>
+        <li class="list-group-item">
+          <strong>Zona Horaria:</strong> {{country.timezones}}
+        </li>
+
+        <li class="list-group-item">
+          <strong>Moneda:</strong>
+          {{country.currencies.AED?.name}}
+          {{country.currencies.AFN?.name}}
+          {{country.currencies.ALL?.name}}
+          {{country.currencies.AMD?.name}}
+          {{country.currencies.ANG?.name}}
+          {{country.currencies.AOA?.name}}
+          {{country.currencies.ARS?.name}}
+          {{country.currencies.AUD?.name}}
+          {{country.currencies.AWG?.name}}
+          {{country.currencies.AZN?.name}}
+          {{country.currencies.BAM?.name}}
+          {{country.currencies.BBD?.name}}
+          {{country.currencies.BDT?.name}}
+          {{country.currencies.BGN?.name}}
+          {{country.currencies.BHD?.name}}
+          {{country.currencies.BIF?.name}}
+          {{country.currencies.BMD?.name}}
+          {{country.currencies.BND?.name}}
+          {{country.currencies.BOB?.name}}
+          {{country.currencies.BRL?.name}}
+          {{country.currencies.BSD?.name}}
+          {{country.currencies.BTN?.name}}
+          {{country.currencies.BWP?.name}}
+          {{country.currencies.BYN?.name}}
+          {{country.currencies.BZD?.name}}
+          {{country.currencies.CAD?.name}}
+          {{country.currencies.CDF?.name}}
+          {{country.currencies.CHF?.name}}
+          {{country.currencies.CLP?.name}}
+          {{country.currencies.CNY?.name}}
+          {{country.currencies.COP?.name}}
+          {{country.currencies.CRC?.name}}
+          {{country.currencies.CUC?.name}}
+          {{country.currencies.CUP?.name}}
+          {{country.currencies.CVE?.name}}
+          {{country.currencies.CZK?.name}}
+          {{country.currencies.DJF?.name}}
+          {{country.currencies.DKK?.name}}
+          {{country.currencies.DOP?.name}}
+          {{country.currencies.DZD?.name}}
+          {{country.currencies.EGP?.name}}
+          {{country.currencies.ERN?.name}}
+          {{country.currencies.ETB?.name}}
+          {{country.currencies.EUR?.name}}
+          {{country.currencies.FJD?.name}}
+          {{country.currencies.FKP?.name}}
+          {{country.currencies.GBP?.name}}
+          {{country.currencies.GEL?.name}}
+          {{country.currencies.GHS?.name}}
+          {{country.currencies.GIP?.name}}
+          {{country.currencies.GMD?.name}}
+          {{country.currencies.GNF?.name}}
+          {{country.currencies.GTQ?.name}}
+          {{country.currencies.GYD?.name}}
+          {{country.currencies.HKD?.name}}
+          {{country.currencies.HNL?.name}}
+          {{country.currencies.HRK?.name}}
+          {{country.currencies.HTG?.name}}
+          {{country.currencies.HUF?.name}}
+          {{country.currencies.IDR?.name}}
+          {{country.currencies.ILS?.name}}
+          {{country.currencies.INR?.name}}
+          {{country.currencies.IQD?.name}}
+          {{country.currencies.IRR?.name}}
+          {{country.currencies.ISK?.name}}
+          {{country.currencies.JMD?.name}}
+          {{country.currencies.JOD?.name}}
+          {{country.currencies.JPY?.name}}
+          {{country.currencies.KES?.name}}
+          {{country.currencies.KGS?.name}}
+          {{country.currencies.KHR?.name}}
+          {{country.currencies.KMF?.name}}
+          {{country.currencies.KPW?.name}}
+          {{country.currencies.KRW?.name}}
+          {{country.currencies.KWD?.name}}
+          {{country.currencies.KYD?.name}}
+          {{country.currencies.KZT?.name}}
+          {{country.currencies.LAK?.name}}
+          {{country.currencies.LBP?.name}}
+          {{country.currencies.LKR?.name}}
+          {{country.currencies.LRD?.name}}
+          {{country.currencies.LSL?.name}}
+          {{country.currencies.LTL?.name}}
+          {{country.currencies.LYD?.name}}
+          {{country.currencies.MAD?.name}}
+          {{country.currencies.MDL?.name}}
+          {{country.currencies.MGA?.name}}
+          {{country.currencies.MKD?.name}}
+          {{country.currencies.MMK?.name}}
+          {{country.currencies.MNT?.name}}
+          {{country.currencies.MOP?.name}}
+          {{country.currencies.MRO?.name}}
+          {{country.currencies.MRU?.name}}
+          {{country.currencies.MUR?.name}}
+          {{country.currencies.MVR?.name}}
+          {{country.currencies.MWK?.name}}
+          {{country.currencies.MXN?.name}}
+          {{country.currencies.MYR?.name}}
+          {{country.currencies.MZN?.name}}
+          {{country.currencies.NAD?.name}}
+          {{country.currencies.NGN?.name}}
+          {{country.currencies.NIO?.name}}
+          {{country.currencies.NOK?.name}}
+          {{country.currencies.NPR?.name}}
+          {{country.currencies.NZD?.name}}
+          {{country.currencies.OMR?.name}}
+          {{country.currencies.PAB?.name}}
+          {{country.currencies.PEN?.name}}
+          {{country.currencies.PGK?.name}}
+          {{country.currencies.PHP?.name}}
+          {{country.currencies.PKR?.name}}
+          {{country.currencies.PLN?.name}}
+          {{country.currencies.PYG?.name}}
+          {{country.currencies.QAR?.name}}
+          {{country.currencies.RON?.name}}
+          {{country.currencies.RSD?.name}}
+          {{country.currencies.RUB?.name}}
+          {{country.currencies.RWF?.name}}
+          {{country.currencies.SAR?.name}}
+          {{country.currencies.SBD?.name}}
+          {{country.currencies.SCR?.name}}
+          {{country.currencies.SDG?.name}}
+          {{country.currencies.SEK?.name}}
+          {{country.currencies.SGD?.name}}
+          {{country.currencies.SLL?.name}}
+          {{country.currencies.SOS?.name}}
+          {{country.currencies.SRD?.name}}
+          {{country.currencies.SSP?.name}}
+          {{country.currencies.STN?.name}}
+          {{country.currencies.SYP?.name}}
+          {{country.currencies.SZL?.name}}
+          {{country.currencies.THB?.name}}
+          {{country.currencies.TJS?.name}}
+          {{country.currencies.TMT?.name}}
+          {{country.currencies.TND?.name}}
+          {{country.currencies.TOP?.name}}
+          {{country.currencies.TRY?.name}}
+          {{country.currencies.TTD?.name}}
+          {{country.currencies.TWD?.name}}
+          {{country.currencies.TZS?.name}}
+          {{country.currencies.UAH?.name}}
+          {{country.currencies.UGX?.name}}
+          {{country.currencies.USD?.name}}
+          {{country.currencies.UYU?.name}}
+          {{country.currencies.UZS?.name}}
+          {{country.currencies.VEF?.name}}
+          {{country.currencies.VES?.name}}
+          {{country.currencies.VND?.name}}
+          {{country.currencies.VUV?.name}}
+          {{country.currencies.WST?.name}}
+          {{country.currencies.XAF?.name}}
+          {{country.currencies.XCD?.name}}
+          {{country.currencies.XOF?.name}}
+          {{country.currencies.XPF?.name}}
+          {{country.currencies.YER?.name}}
+          {{country.currencies.ZAR?.name}}
+          {{country.currencies.ZMW?.name}}
+          {{country.currencies.ZWD?.name}}
+          {{country.currencies.ZWL?.name}}
+
+
+
+
+
+          <strong> - Símbolo:</strong>
+          {{country.currencies.AED?.symbol}}
+          {{country.currencies.AFN?.symbol}}
+          {{country.currencies.ALL?.symbol}}
+          {{country.currencies.AMD?.symbol}}
+          {{country.currencies.ANG?.symbol}}
+          {{country.currencies.AOA?.symbol}}
+          {{country.currencies.ARS?.symbol}}
+          {{country.currencies.AUD?.symbol}}
+          {{country.currencies.AWG?.symbol}}
+          {{country.currencies.AZN?.symbol}}
+          {{country.currencies.BAM?.symbol}}
+          {{country.currencies.BBD?.symbol}}
+          {{country.currencies.BDT?.symbol}}
+          {{country.currencies.BGN?.symbol}}
+          {{country.currencies.BHD?.symbol}}
+          {{country.currencies.BIF?.symbol}}
+          {{country.currencies.BMD?.symbol}}
+          {{country.currencies.BND?.symbol}}
+          {{country.currencies.BOB?.symbol}}
+          {{country.currencies.BRL?.symbol}}
+          {{country.currencies.BSD?.symbol}}
+          {{country.currencies.BTN?.symbol}}
+          {{country.currencies.BWP?.symbol}}
+          {{country.currencies.BYN?.symbol}}
+          {{country.currencies.BZD?.symbol}}
+          {{country.currencies.CAD?.symbol}}
+          {{country.currencies.CDF?.symbol}}
+          {{country.currencies.CHF?.symbol}}
+          {{country.currencies.CLP?.symbol}}
+          {{country.currencies.CNY?.symbol}}
+          {{country.currencies.COP?.symbol}}
+          {{country.currencies.CRC?.symbol}}
+          {{country.currencies.CUC?.symbol}}
+          {{country.currencies.CUP?.symbol}}
+          {{country.currencies.CVE?.symbol}}
+          {{country.currencies.CZK?.symbol}}
+          {{country.currencies.DJF?.symbol}}
+          {{country.currencies.DKK?.symbol}}
+          {{country.currencies.DOP?.symbol}}
+          {{country.currencies.DZD?.symbol}}
+          {{country.currencies.EGP?.symbol}}
+          {{country.currencies.ERN?.symbol}}
+          {{country.currencies.ETB?.symbol}}
+          {{country.currencies.EUR?.symbol}}
+          {{country.currencies.FJD?.symbol}}
+          {{country.currencies.FKP?.symbol}}
+          {{country.currencies.GBP?.symbol}}
+          {{country.currencies.GEL?.symbol}}
+          {{country.currencies.GHS?.symbol}}
+          {{country.currencies.GIP?.symbol}}
+          {{country.currencies.GMD?.symbol}}
+          {{country.currencies.GNF?.symbol}}
+          {{country.currencies.GTQ?.symbol}}
+          {{country.currencies.GYD?.symbol}}
+          {{country.currencies.HKD?.symbol}}
+          {{country.currencies.HNL?.symbol}}
+          {{country.currencies.HRK?.symbol}}
+          {{country.currencies.HTG?.symbol}}
+          {{country.currencies.HUF?.symbol}}
+          {{country.currencies.IDR?.symbol}}
+          {{country.currencies.ILS?.symbol}}
+          {{country.currencies.INR?.symbol}}
+          {{country.currencies.IQD?.symbol}}
+          {{country.currencies.IRR?.symbol}}
+          {{country.currencies.ISK?.symbol}}
+          {{country.currencies.JMD?.symbol}}
+          {{country.currencies.JOD?.symbol}}
+          {{country.currencies.JPY?.symbol}}
+          {{country.currencies.KES?.symbol}}
+          {{country.currencies.KGS?.symbol}}
+          {{country.currencies.KHR?.symbol}}
+          {{country.currencies.KMF?.symbol}}
+          {{country.currencies.KPW?.symbol}}
+          {{country.currencies.KRW?.symbol}}
+          {{country.currencies.KWD?.symbol}}
+          {{country.currencies.KYD?.symbol}}
+          {{country.currencies.KZT?.symbol}}
+          {{country.currencies.LAK?.symbol}}
+          {{country.currencies.LBP?.symbol}}
+          {{country.currencies.LKR?.symbol}}
+          {{country.currencies.LRD?.symbol}}
+          {{country.currencies.LSL?.symbol}}
+          {{country.currencies.LTL?.symbol}}
+          {{country.currencies.LYD?.symbol}}
+          {{country.currencies.MAD?.symbol}}
+          {{country.currencies.MDL?.symbol}}
+          {{country.currencies.MGA?.symbol}}
+          {{country.currencies.MKD?.symbol}}
+          {{country.currencies.MMK?.symbol}}
+          {{country.currencies.MNT?.symbol}}
+          {{country.currencies.MOP?.symbol}}
+          {{country.currencies.MRO?.symbol}}
+          {{country.currencies.MRU?.symbol}}
+          {{country.currencies.MUR?.symbol}}
+          {{country.currencies.MVR?.symbol}}
+          {{country.currencies.MWK?.symbol}}
+          {{country.currencies.MXN?.symbol}}
+          {{country.currencies.MYR?.symbol}}
+          {{country.currencies.MZN?.symbol}}
+          {{country.currencies.NAD?.symbol}}
+          {{country.currencies.NGN?.symbol}}
+          {{country.currencies.NIO?.symbol}}
+          {{country.currencies.NOK?.symbol}}
+          {{country.currencies.NPR?.symbol}}
+          {{country.currencies.NZD?.symbol}}
+          {{country.currencies.OMR?.symbol}}
+          {{country.currencies.PAB?.symbol}}
+          {{country.currencies.PEN?.symbol}}
+          {{country.currencies.PGK?.symbol}}
+          {{country.currencies.PHP?.symbol}}
+          {{country.currencies.PKR?.symbol}}
+          {{country.currencies.PLN?.symbol}}
+          {{country.currencies.PYG?.symbol}}
+          {{country.currencies.QAR?.symbol}}
+          {{country.currencies.RON?.symbol}}
+          {{country.currencies.RSD?.symbol}}
+          {{country.currencies.RUB?.symbol}}
+          {{country.currencies.RWF?.symbol}}
+          {{country.currencies.SAR?.symbol}}
+          {{country.currencies.SBD?.symbol}}
+          {{country.currencies.SCR?.symbol}}
+          {{country.currencies.SDG?.symbol}}
+          {{country.currencies.SEK?.symbol}}
+          {{country.currencies.SGD?.symbol}}
+          {{country.currencies.SLL?.symbol}}
+          {{country.currencies.SOS?.symbol}}
+          {{country.currencies.SRD?.symbol}}
+          {{country.currencies.SSP?.symbol}}
+          {{country.currencies.STN?.symbol}}
+          {{country.currencies.SYP?.symbol}}
+          {{country.currencies.SZL?.symbol}}
+          {{country.currencies.THB?.symbol}}
+          {{country.currencies.TJS?.symbol}}
+          {{country.currencies.TMT?.symbol}}
+          {{country.currencies.TND?.symbol}}
+          {{country.currencies.TOP?.symbol}}
+          {{country.currencies.TRY?.symbol}}
+          {{country.currencies.TTD?.symbol}}
+          {{country.currencies.TWD?.symbol}}
+          {{country.currencies.TZS?.symbol}}
+          {{country.currencies.UAH?.symbol}}
+          {{country.currencies.UGX?.symbol}}
+          {{country.currencies.USD?.symbol}}
+          {{country.currencies.UYU?.symbol}}
+          {{country.currencies.UZS?.symbol}}
+          {{country.currencies.VEF?.symbol}}
+          {{country.currencies.VES?.symbol}}
+          {{country.currencies.VND?.symbol}}
+          {{country.currencies.VUV?.symbol}}
+          {{country.currencies.WST?.symbol}}
+          {{country.currencies.XAF?.symbol}}
+          {{country.currencies.XCD?.symbol}}
+          {{country.currencies.XOF?.symbol}}
+          {{country.currencies.XPF?.symbol}}
+          {{country.currencies.YER?.symbol}}
+          {{country.currencies.ZAR?.symbol}}
+          {{country.currencies.ZMW?.symbol}}
+          {{country.currencies.ZWD?.symbol}}
+          {{country.currencies.ZWL?.symbol}}
+        </li>
+        <li class="list-group-item">
+          <strong>Idiomas:</strong>
+
+          {{country.languages.afr }}
+          {{country.languages.amh }}
+          {{country.languages.ara }}
+          {{country.languages.arc }}
+          {{country.languages.aym }}
+          {{country.languages.aze }}
+          {{country.languages.ben }}
+          {{country.languages.ber }}
+          {{country.languages.bjz }}
+          {{country.languages.bwg }}
+          {{country.languages.ckb }}
+          {{country.languages.crs }}
+          {{country.languages.deu }}
+          {{country.languages.div }}
+          {{country.languages.dzo }}
+          {{country.languages.eng }}
+          {{country.languages.fas }}
+          {{country.languages.fil }}
+          {{country.languages.fra }}
+          {{country.languages.grn }}
+          {{country.languages.hat }}
+          {{country.languages.heb }}
+          {{country.languages.her }}
+          {{country.languages.hgm }}
+          {{country.languages.hin }}
+          {{country.languages.hye }}
+          {{country.languages.ind }}
+          {{country.languages.ita }}
+          {{country.languages.jam }}
+          {{country.languages.jpn }}
+          {{country.languages.kal }}
+          {{country.languages.kat }}
+          {{country.languages.kaz }}
+          {{country.languages.kck }}
+          {{country.languages.khi }}
+          {{country.languages.khm }}
+          {{country.languages.kin }}
+          {{country.languages.kir }}
+          {{country.languages.kon }}
+          {{country.languages.kor }}
+          {{country.languages.kwn }}
+          {{country.languages.lao }}
+          {{country.languages.lin }}
+          {{country.languages.loz }}
+          {{country.languages.lua }}
+          {{country.languages.mey }}
+          {{country.languages.mfe }}
+          {{country.languages.mlg }}
+          {{country.languages.mon }}
+          {{country.languages.msa }}
+          {{country.languages.mya }}
+          {{country.languages.nbl }}
+          {{country.languages.ndc }}
+          {{country.languages.nde }}
+          {{country.languages.ndo }}
+          {{country.languages.nep }}
+          {{country.languages.nld }}
+          {{country.languages.nso }}
+          {{country.languages.nya }}
+          {{country.languages.pap }}
+          {{country.languages.por }}
+          {{country.languages.pov }}
+          {{country.languages.prs }}
+          {{country.languages.pus }}
+          {{country.languages.que }}
+          {{country.languages.run }}
+          {{country.languages.rus }}
+          {{country.languages.sag }}
+          {{country.languages.sin }}
+          {{country.languages.sna }}
+          {{country.languages.som }}
+          {{country.languages.sot }}
+          {{country.languages.spa }}
+          {{country.languages.ssw }}
+          {{country.languages.swa }}
+          {{country.languages.tam }}
+          {{country.languages.tet }}
+          {{country.languages.tgk }}
+          {{country.languages.tha }}
+          {{country.languages.tir }}
+          {{country.languages.toi }}
+          {{country.languages.tsn }}
+          {{country.languages.tso }}
+          {{country.languages.tuk }}
+          {{country.languages.tur }}
+          {{country.languages.urd }}
+          {{country.languages.uzb }}
+          {{country.languages.ven }}
+          {{country.languages.vie }}
+          {{country.languages.xho }}
+          {{country.languages.zdj }}
+          {{country.languages.zho }}
+          {{country.languages.zib }}
+          {{country.languages.zul }}
+
+        </li>
+        <li class="list-group-item">
+          <strong>Límites:</strong> {{country.borders}}
+        </li>
+      </ul>
+
+    </div>
+  </div>
+
+
+  <div class="row mt-3">
+    <div class="col-4">
+      <h3>Escudo</h3>
+
+      <img [src]="country.coatOfArms.svg" [alt]="country.name.common"  class="img-thumbnail">
+
+    </div>
+
+
+  <div class="row mt-2">
+    <div class="col ">
+
+      <h3>Traducciones</h3>
+
+      <div class="d-flex flex-wrap">
+
+        <span class="badge bg-primary m-1">{{country.translations['ara'].common}} </span>
+        <span class="badge bg-primary m-1">{{country.translations['bra'].common}} </span>
+        <span class="badge bg-primary m-1">{{country.translations['jap'].common}} </span>
+        <span class="badge bg-primary m-1">{{country.translations['bre'].common}} </span>
+        <span class="badge bg-primary m-1">{{country.translations['ces'].common}} </span>
+        <span class="badge bg-primary m-1">{{country.translations['cym'].common}} </span>
+        <span class="badge bg-primary m-1">{{country.translations['deu'].common}} </span>
+        <span class="badge bg-primary m-1">{{country.translations['est'].common}} </span>
+        <span class="badge bg-primary m-1">{{country.translations['fin'].common}} </span>
+        <span class="badge bg-primary m-1">{{country.translations['ita'].common}} </span>
+        <span class="badge bg-primary m-1">{{country.translations['kor'].common}} </span>
+        <span class="badge bg-primary m-1">{{country.translations['per'].common}} </span>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+</div>
+
